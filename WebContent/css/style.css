@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Thin.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Thin.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraLight.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraLight.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Light.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Light.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Regular.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Regular.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Medium.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Medium.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Bold.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Bold.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraBold.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraBold.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Apple SD Gothic Neo';
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Black.woff2')
+		format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Black.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'YiSunShinRegular';
+	src:
+		url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YiSunShinRegular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	font-family: 'Apple SD Gothic Neo';
+	color: #F9F9F9;
+}
+
+.body-wrapper{
+	background-color: #171717;
+	padding: 0px;
+	height: 100%;
+}
+
+.menu-container  {
+	background-color: transparent;
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.menu-container .menu-wrapper {
+	background-color: #171717;
+	height: 70px;
+	padding: 0px;
+}
+
+.menu-container .menu-wrapper .menu {
+	width: 16.666%;
+	padding-left: 25px;
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #212121;
+}
+
+.menu-container .menu-wrapper .menu:hover {
+	cursor: pointer;
+	color: #A9701B;
+}
+
+.menu-container .menu-wrapper .menu:last-child {
+	width: 16.666%;
+	padding-left: 25px;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #212121;
+}
+
+.menu-container .menu-button-wrapper {
+	background-color: #171717;
+	height: 70px;
+	padding: 0px;
+	display: none !important;
+}
+
+.menu-container .menu-button-wrapper div {
+	width: 50%;
+	padding: 0px 10px 0px 10px;
+}
+
+.menu-container .menu-button-wrapper i {
+	font-size: 2rem;
+}
+
+@media ( max-width : 850px) {
+	.menu-container .menu-wrapper {
+		display: none !important;
+	}
+	.menu-container .menu-button-wrapper {
+		display: flex !important;
+	}
+}
+
+section {
+	max-width: 1920px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #171717;
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	width: 100%;
+	padding-right: calc(var(--bs-gutter-x)* 0.5);
+	padding-left: calc(var(--bs-gutter-x)* 0.5);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.section-home {
+	background-image: linear-gradient(to bottom, rgba(23, 23, 23, 0) 0%,
+		rgba(23, 23, 23, 1) 100%), url('../image/section01-bg.png');
+	height: 1100px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.home-container {
+	height: 100%;
+	padding-top: 360px;
+}
+
+.home-container .introduction-animation-wrapper {
+	position: relative;
+	height: 120px;
+}
+
+.home-container .introduction-animation-wrapper .text-animation {
+	animation: fadeInOut 16s ease-in-out infinite;
+	opacity: 0;
+	font-size: 5rem;
+	color: white;
+	position: absolute;
+}
+
+.home-container .introduction-animation-wrapper .text-animation:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.home-container .introduction-animation-wrapper .text-animation:nth-child(2) {
+	animation-delay: 4s;
+}
+
+.home-container .introduction-animation-wrapper .text-animation:nth-child(3) {
+	animation-delay: 8s;
+}
+
+.home-container .introduction-animation-wrapper .text-animation:nth-child(4) {
+	animation-delay: 12s;
+}
+
+@keyframes fadeInOut {
+  0%   		{ opacity: 0; }
+  6.25%  	{ opacity: 1; }
+  18.75% 	{ opacity: 1; }
+  25%  		{ opacity: 0; }
+  100% 		{ opacity: 0; }
+}
+
+.home-container .introduction-wrapper {
+	font-size: 5rem;
+}
+
+.home-container .introduction-wrapper font {
+	font-weight: bold;
+	font-size: 6.5rem;
+}
+
+@media ( max-width : 1199px) {
+	.home-container .introduction-animation-wrapper .text-animation {
+		font-size: 4rem;
+	}
+	.home-container .introduction-wrapper {
+		font-size: 4rem;
+	}
+	.home-container .introduction-wrapper font {
+		font-size: 5.5rem;
+	}
+}
+
+@media ( max-width : 991px) {
+	.home-container .introduction-animation-wrapper {
+		height: 90px;
+	}
+	.home-container .introduction-animation-wrapper .text-animation {
+		font-size: 3rem;
+	}
+	.home-container .introduction-wrapper {
+		font-size: 3rem;
+	}
+	.home-container .introduction-wrapper font {
+		font-size: 4.5rem;
+	}
+}
+
+@media ( max-width : 767px) {
+	.section-home{
+		height: 100vh;
+		min-height: 700px;
+	}
+	.home-container {
+		padding-top: 260px;
+	}
+	.home-container .introduction-animation-wrapper {
+		height: 50px;
+	}
+	.home-container .introduction-animation-wrapper .text-animation {
+		font-size: 2rem;
+	}
+	.home-container .introduction-wrapper {
+		font-size: 2rem;
+	}
+	.home-container .introduction-wrapper font {
+		font-size: 3.5rem;
+	}
+}
+
+@media ( max-width : 450px) {
+	.home-container .introduction-animation-wrapper .text-animation {
+		font-size: 1.8rem;
+	}
+	.home-container .introduction-wrapper {
+		font-size: 1.8rem;
+	}
+	.home-container .introduction-wrapper font {
+		font-size: 3.3rem;
+	}
+}
+
+@media ( max-width : 414px) {
+	.home-container .introduction-animation-wrapper .text-animation {
+		font-size: 1.5rem;
+	}
+	.home-container .introduction-wrapper {
+		font-size: 1.5rem;
+	}
+	.home-container .introduction-wrapper font {
+		font-size: 2.8rem;
+	}
+}
+
+
+.section-about{
+	height: 1300px;
+}
+
+.about-container{
+	height: 100%;	
+}
+
+.about-container .about-image-wrapper{
+	width: 700px; 
+	margin-top: 66px;
+}
+
+.about-container .about-image-wrapper img {
+	height: auto; max-width: 100%;
+}
+
+.about-container .about-text-wrapper{
+	width: 750px; height: 400px; margin-left: -4rem; margin-top: 280px;
+}
+
+.about-container .about-text-wrapper .title{
+	color: #A9701B; font-size: 1.5rem; font-weight: bold;
+}
+
+.about-container .about-text-wrapper .title .line{
+	flex: 1; height: 1.5px; background-color: #A9701B; margin-right: 10px; max-width: 80px;
+}
+
+.about-container .about-text-wrapper .content{
+	color: white; padding-top: 35px;
+}
+
+.about-container .about-text-wrapper .content p{
+	line-height: 2.7; font-size: 1.2rem;
+}
+
+@media ( max-width : 1199px) {
+	.section-about{
+		height: 1500px;
+	}
+	.about-container .about-image-wrapper{
+		width: 100%;
+	}
+	.about-container .about-image-wrapper img {
+		max-width: 80%;
+	}
+	.about-container .about-text-wrapper{
+		width: 100%;
+		margin-top: 70px;
+		margin-left: 0rem;
+		padding-left: 96px;
+	}
+}
+
+@media ( max-width : 991px) {
+	.about-container .about-text-wrapper{
+		padding-left: 72px;
+	}
+	.about-container .about-text-wrapper .content p{
+		font-size: 1.1rem;
+	}
+}
+
+@media ( max-width : 767px) {
+	.section-about{
+		height: 1300px;
+	}
+	.about-container .about-text-wrapper{
+		padding-left: 54px;
+		padding-right: 54px;
+	}
+	.about-container .about-text-wrapper .content p{
+		font-size: 1rem;
+		text-align: justify;
+	}
+	.about-container .about-text-wrapper .content p br:not(:first-of-type){
+		display: none;
+	}
+}
+
+@media ( max-width : 579px) {
+	.about-container .about-text-wrapper{
+		padding-left: 10%;
+	}
+}
+
+@media ( max-width : 430px) {
+	.about-container .about-text-wrapper .content p br {
+		display: none;
+	}
+}
+
+.section-career {
+	background-image: linear-gradient(to top, rgba(23, 23, 23, 0) 0%, rgba(23, 23, 23, 1) 100%), url('../image/section03-bg.png');
+	min-height: 100vh;
+}
+
+.section-career .career-container .title{
+	color: #A9701B; font-size: 1.5rem; font-weight: bold;
+}
+
+.section-career .career-container .title .line{
+	flex: 1; height: 1.5px; background-color: #A9701B; margin-right: 10px; max-width: 120px;
+}
+
+.section-career .career-container .content .company-wrapper .company-info-wrapper .line{
+	flex: 1; height: 1.5px; background-color: #5B5B5C; max-width: 730px;
+}

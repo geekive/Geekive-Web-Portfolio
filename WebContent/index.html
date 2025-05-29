@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Geekily Portfolio</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-icon/font/bootstrap-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="body-wrapper container-fluid">
+		
+		<!-- menu :: s -->
+		<div class="menu-container">
+			<div class="menu-wrapper container d-flex jcs">
+				<div class="menu d-flex aic">
+					홈 <!-- Home -->
+				</div>
+				<div class="menu d-flex aic">
+					소개 <!-- About -->
+				</div>
+				<div class="menu d-flex aic">
+					커리어 <!-- Career -->
+				</div>
+				<div class="menu d-flex aic">
+					프로젝트 <!-- Project -->
+				</div>
+				<div class="menu d-flex aic">
+					기술 <!-- Skills -->
+				</div>
+				<div class="menu d-flex aic">
+					컨텍트 <!-- Contact -->
+				</div>
+			</div>
+			<div class="menu-button-wrapper d-flex">
+				<div class="d-flex aic jcs">
+					Geekily Portfolio
+				</div>
+				<div class="d-flex aic jce">
+					<i class="bi bi-list"></i>
+				</div>
+			</div>
+		</div>
+		<!-- menu :: e -->
+		
+		<!-- section home :: s -->
+		<section class="section-home">
+			<div class="home-container container">
+				<div class="introduction-animation-wrapper">
+					<div class="text-animation">
+						일을 성공적으로 끝내는
+					</div>
+					<div class="text-animation">
+						계속 성장하는
+					</div>
+					<div class="text-animation">
+						어려움에 도전하는
+					</div>
+					<div class="text-animation">
+						주인의식이 있는
+					</div>
+				</div>
+				<div class="introduction-wrapper">
+					백엔드 개발자 <font>임의빈</font> 입니다.<br/>
+				</div>
+			</div>
+		</section>
+		<!-- section home :: e -->
+		
+		<!-- section about :: s -->
+		<section class="section-about">
+			<div class="about-container container d-flex jcs">
+				<div class="about-image-wrapper">
+ 					<img src="https://themewagon.github.io/luther/images/about-photo.jpg"/>
+ 				</div>
+ 				<div class="about-text-wrapper">
+					<div class="title d-flex aic">
+						<div class="line"></div>소개
+					</div>
+					<div class="content">
+						<p>
+							안녕하세요, 백엔드 개발자 임의빈입니다.<br/>
+							데이터 흐름이나 예외 처리 등 세부적인 부분을 직접 설계하는것을 즐깁니다.<br/>
+							겉보기에 화려한 코드보다, 읽기 쉽고 안정적인 코드를 선호하며<br/>
+							코드 한 줄에도 나름의 이유가 담겨 있어야 한다고 생각합니다.<br/>
+							단순히 동작하는 것에 그치지 않고,<br/>
+							개발자 누구나 이해할 수 있는 코드를 만드는 걸 목표로 합니다.<br/>
+							소통하는 개발자로서, 고객을 만족시키는 서비스 개발과 운영에 관심이 많습니다.<br/>
+						</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function(){
+					$(window).on('resize load', function(){
+						let $aboutContainer 	= $('.about-container');
+						let $aboutImageWrapper 	= $('.about-image-wrapper');
+						if($(window).width() < 1185){
+							$aboutContainer.removeClass('d-flex jcs');
+							$aboutImageWrapper.addClass('d-flex jcc');
+						}else{
+						  	$aboutContainer.addClass('d-flex jcs');
+						  	$aboutImageWrapper.removeClass('d-flex jcc');
+						}
+					});
+				})
+			</script>
+		</section>
+		<!-- section about :: e -->
+		
+		<!-- section career :: s -->
+  <style>
+    .profile-img {
+      width: 170px;
+      height: 170px;
+     	/* border-radius: 50%; */
+      object-fit: contain;
+      background-color: #fff; /* 빈 공간을 위한 배경 */
+    }
+  </style>
+		<section class="section-career">
+		
+  <style>
+    .timeline {
+      position: relative;
+      margin-left: 40px;
+      padding-left: 20px;
+      border-left: 3px solid #ccc;
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background-color: #007bff;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #ccc;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content h4 {
+      margin: 0 0 4px 0;
+      font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+		
+			<div class="career-container container">
+				<div class="title d-flex aic">
+					<div class="line"></div>커리어
+				</div>
+				<div class="content" style="padding-top: 90px;">
+					<div class="company-wrapper d-flex jcs">
+						<img src="image/section03-company-infinitum.png" alt="프로필 이미지" class="profile-img">
+						<div class="company-info-wrapper" style="width: 100%; padding-left: 30px;">
+							<div class="line"></div>
+							<p style="margin-top: 30px; font-weight: bold; font-size: 1.2rem;">인피니텀 주식회사</p>
+							<p>SI/SM</p>
+							<p>2021. 03 ~ 재직중</p>
+						</div>
+					</div>
+						    <div class="timeline">
+
+						      <div class="timeline-entry">
+						        <div class="timeline-content">
+						          <h4>2023.03 - 현재 | ABC Corp</h4>
+						          <p>백엔드 개발자로 근무하며 API 개발 및 인프라 유지보수 담당</p>
+						        </div>
+						      </div>
+						
+						    </div>
+				</div>
+			</div>
+		</section>
+		<!-- section career :: e -->
+		
+	</div>
+</body>
+</html>
