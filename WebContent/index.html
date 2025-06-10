@@ -182,7 +182,7 @@
 								<img src="image/section03-project-lg.jpg" class="career-project-image">
 								<div>
 									<p>LG 에너지솔루션 대표 홈페이지 구축 사업</p>
-									<p>2021. 06 ~ 2023. 09</p>
+									<p>2021. 06 ~ 2021. 09</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -220,6 +220,14 @@
 							$timelineWrapper.addClass('d-flex jcs');
 						}
 					});
+			
+					$('.project-wrapper').on('mouseenter', function() {
+						$(this).find('div').removeClass('hover-out').addClass('hover-in');
+					});
+
+					$('.project-wrapper').on('mouseleave', function() {
+						$(this).find('div').removeClass('hover-in').addClass('hover-out');
+					});
 				})
 			</script>
 		</section>
@@ -246,6 +254,37 @@
 								<span class="tag">#Nginx</span>
 							</p>
 						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function() {
+				  $('.section-project .project-container .content .project-wrapper').on('mouseenter', function() {
+				    $(this).find('.project-info').removeClass('hover-out').addClass('hover-in');
+				  });
+				
+				  $('.section-project .project-container .content .project-wrapper').on('mouseleave', function() {
+					$(this).find('.project-info').removeClass('hover-in').addClass('hover-out');
+				  });
+				});
+			</script>
+		</section>
+		<!-- section project :: e -->
+		
+		<!-- section project :: s -->
+		<section class="section-skill">
+			<div class="skill-container container">
+				<div class="title d-flex aic">
+					<div class="line"></div>기술
+				</div>
+				<div class="content">
+					<div class="skill-wrapper">
+					 	<p style="font-weight: bold; border-bottom: 1px solid #5B5B5C; padding-bottom: 15px; margin-bottom: 25px;"># 프로그래밍 언어</p>
+					 	<div class="skill-bar-wrapper d-flex jcs" style="width: 100%;">
+							<div class="skill"><div class="bar"><div class="bar-fill java">Java<span>87%</span></div></div></div>
+							<div class="skill"><div class="bar"><div class="bar-fill JavaScript">JavaScript<span>60%</span></div></div></div>					 	
+					 	</div>
+					 	
 					</div>
 				</div>
 			</div>
