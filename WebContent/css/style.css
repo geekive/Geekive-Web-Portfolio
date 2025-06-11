@@ -735,9 +735,10 @@ section {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-height: 800px;
-	height: 120vh;
+	min-height: 1200px;
+	height: fit-content;
 	padding-top: 180px;
+	padding-bottom: 100px;
 }
 
 .section-skill .skill-container .title{
@@ -752,41 +753,115 @@ section {
 	padding-top: 60px;
 }
 
+.section-skill .skill-container .content .skill-wrapper:not(:first-of-type){
+	padding-top: 80px;
+}
 
+.section-skill .skill-container .content .skill-wrapper .skill-category{
+	font-weight: bold;
+	border-bottom: 1px solid #5B5B5C;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	font-size: 1rem;
+}
 
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper{
+	gap: 10px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	
+}
 
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+	height: 52px;
+	width: fit-content;
+	min-width: 146.5px;
+	max-width: 200px !important;
+	border-radius: 5px;
+	font-weight: bold;
+	background-color: #212121;
+	user-select:none;
+	font-size: 0.9rem;
+}
 
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge span{
+	margin-left: 8px; margin-top: 3px;
+}
 
-    .skill {
-      width: 48%;
-      margin-right: 2%;
-      border: 1px solid #5B5B5C;
-    }
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.java{width: 28px; margin-bottom: 7px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.html{width: 22px; fill: #E34F26;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.javascript{width: 21px; fill: #F7DF1E;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.css{width: 23px; fill: #663399;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.spring{width: 22px; fill: #6DB33F}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.spring-boot{width: 22px; fill: #6DB33F}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.devon{width: 22px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.egovframework{height: 21px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.jquery{width: 23px; fill: #0769AD}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.oracle{width: 55px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.mariadb{width: 22px; fill: #0769AD}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.cubrid{width: 22px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.git{width: 22px; fill: #F05032}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.github{width: 22px; fill: #F9F9F9}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.docker{width: 22px; fill: #2496ED}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.aws{width: 22px;}
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.oracle-cloud{width: 22px;}
 
-    .bar {
-      background: #F9F9F9;
-      height: 28px;
-      overflow: hidden;
-      position: relative;
-    }
+@media ( max-width : 1437px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 142.3px;
+	}
+}
 
-    .bar-fill {
-      height: 100%;
-      padding-left: 12px;
-      padding-top: 5px;
-      padding-right: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 0%;
-      animation: fillBar 1.5s ease-out forwards;
-    }
-    
-    .java       { background: #5B5B5C; --target-width: 87%; }
-    .JavaScript       { background: #5B5B5C; --target-width: 60%; }
-    
-    @keyframes fillBar {
-      to {
-        width: var(--target-width);
-      }
-    }
+@media ( max-width : 1399px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 11.6%;
+	}
+}
+
+@media ( max-width : 1199px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 128.5px;
+	}
+}
+
+@media ( max-width : 998px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 127.4px;
+	}
+}
+
+@media ( max-width : 991px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 18.85%;
+	}
+}
+
+@media ( max-width : 767px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 23.5%;
+	}
+}
+
+@media ( max-width : 576px) {
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge{
+		min-width: 23.3%;
+		font-size: 0.8rem;
+	}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.java{width: 26px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.html{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.javascript{width: 19px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.css{width: 21px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.spring{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.spring-boot{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.devon{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.egovframework{height: 19px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.jquery{width: 21px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.oracle{width: 53px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.mariadb{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.cubrid{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.git{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.github{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.docker{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.aws{width: 20px;}
+	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.oracle-cloud{width: 20px;}
+}
