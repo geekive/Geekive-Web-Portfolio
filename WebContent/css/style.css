@@ -137,6 +137,7 @@ html, body {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	font-size: 1rem;
 }
 
 .menu-container .menu-wrapper {
@@ -209,11 +210,15 @@ section {
 .section-home {
 	background-image: linear-gradient(to bottom, rgba(23, 23, 23, 0) 0%,
 		rgba(23, 23, 23, 1) 100%), url('../image/section01-bg.png');
-	height: 1100px;
+	min-height: 1000px;
+	height: 100vh;
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+		background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .home-container {
@@ -738,7 +743,7 @@ section {
 	min-height: 1200px;
 	height: fit-content;
 	padding-top: 180px;
-	padding-bottom: 100px;
+	padding-bottom: 250px;
 }
 
 .section-skill .skill-container .title{
@@ -864,4 +869,26 @@ section {
 	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.docker{width: 20px;}
 	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.aws{width: 20px;}
 	.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.oracle-cloud{width: 20px;}
+}
+
+
+.section-contact{
+	min-height: 500px;
+	height: 85vh;
+}
+
+.section-contact .contact-container .title{
+	color: #A9701B; font-size: 1.5rem; font-weight: bold; width: 100%;
+}
+
+.section-contact .contact-container .content{
+	padding-top: 100px;
+}
+
+.section-contact .contact-container .content .contact-wrapper .email{
+	height: 30px;
+}
+
+.section-contact .contact-container .content .contact-wrapper .line{
+	flex: 1; height: 1.5px; background-color: #F9F9F9; margin-right: 17px; max-width: 40px; margin-bottom: 17px;
 }
