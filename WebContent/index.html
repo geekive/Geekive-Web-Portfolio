@@ -18,24 +18,24 @@
 		<!-- menu :: s -->
 		<div class="menu-container">
 			<div class="menu-wrapper container d-flex jcs">
-				<div class="menu d-flex aic">
+				<a class="menu d-flex aic" href="#home">
 					홈 <!-- Home -->
-				</div>
-				<div class="menu d-flex aic">
+				</a>
+				<a class="menu d-flex aic" href="#about">
 					소개 <!-- About -->
-				</div>
-				<div class="menu d-flex aic">
+				</a>
+				<a class="menu d-flex aic" href="#career">
 					커리어 <!-- Career -->
-				</div>
-				<div class="menu d-flex aic">
+				</a>
+				<a class="menu d-flex aic" href="#project">
 					프로젝트 <!-- Project -->
-				</div>
-				<div class="menu d-flex aic">
+				</a>
+				<a class="menu d-flex aic" href="#skill">
 					기술 <!-- Skills -->
-				</div>
-				<div class="menu d-flex aic">
+				</a>
+				<a class="menu d-flex aic" href="#contact">
 					컨텍트 <!-- Contact -->
-				</div>
+				</a>
 			</div>
 			<div class="menu-button-wrapper d-flex">
 				<div class="d-flex aic jcs">
@@ -49,7 +49,7 @@
 		<!-- menu :: e -->
 		
 		<!-- section home :: s -->
-		<section class="section-home">
+		<section class="section-home" id="home">
 			<div class="home-container container">
 				<div class="introduction-animation-wrapper">
 					<div class="text-animation">
@@ -73,7 +73,7 @@
 		<!-- section home :: e -->
 		
 		<!-- section about :: s -->
-		<section class="section-about">
+		<section class="section-about" id="about">
 			<div class="about-container container d-flex jcs">
 				<div class="about-image-wrapper">
  					<img src="https://themewagon.github.io/luther/images/about-photo.jpg"/>
@@ -114,7 +114,7 @@
 		<!-- section about :: e -->
 		
 		<!-- section career :: s -->
-		<section class="section-career">
+		<section class="section-career" id="career">
 			<div class="career-container container">
 				<div class="title d-flex aic">
 					<div class="line"></div>커리어
@@ -234,7 +234,7 @@
 		<!-- section career :: e -->
 		
 		<!-- section project :: s -->
-		<section class="section-project">
+		<section class="section-project" id="project">
 			<div class="project-container container">
 				<div class="title d-flex aic">
 					<div class="line"></div>프로젝트
@@ -272,7 +272,7 @@
 		<!-- section project :: e -->
 		
 		<!-- section skill :: s -->
-		<section class="section-skill">
+		<section class="section-skill" id="skill">
 			<div class="skill-container container">
 				<div class="title d-flex aic">
 					<div class="line"></div>기술
@@ -475,44 +475,66 @@
 		<!-- section skill :: e -->
 		
 		<!-- section contact :: s -->
-		<section class="section-contact">
+		<section class="section-contact" id="contact">
 			<div class="contact-container container">
 				<div class="title d-flex aic jcc">
 					컨텍트
 				</div>
-				<div class="content">
-					<div class="contact-wrapper">
-						<div class="email d-flex aic jcs" style="margin-bottom: 30px; height: 50px;">
+				<div class="content row d-flex jcc">
+					<!-- contact :: s -->
+					<div class="contact-wrapper col-lg-6">
+						<div class="email d-flex aic jcs">
 							<div class="line"></div>
-							<p style="font-weight: bold; font-size: 1.2rem">
-								<span style="margin-right: 50px">EMAIL</span>
-								<span style="margin-right: 20px">:</span>
-								geekily.com@gmail.com
-							</p>
+							<div class="label">EMAIL</div>
+							<div class="colon" >:</div>
+							<div class="value" >geekily.com@gmail.com</div>
 						</div>
-						<div class="phone d-flex aic jcs" style="margin-bottom: 30px; height: 50px;">
+						<div class="phone d-flex aic jcs">
 							<div class="line"></div>
-							<p style="font-weight: bold; font-size: 1.2rem">
-								<span style="margin-right: 42px">PHONE</span>
-								<span style="margin-right: 20px">:</span>
-								+82 010-5818-2878
-							</p>
+							<div class="label">PHONE</div>
+							<div class="colon" >:</div>
+							<div class="value" >+82 010-5818-2878</div>
 						</div>
-						<div class="link d-flex aic jcs" style="margin-bottom: 30px; height: 50px;">
+						<div class="link d-flex aic jcs">
 							<div class="line"></div>
-							<p style="font-weight: bold; font-size: 1.2rem">
-								<span style="margin-right: 63px">LINK</span>
-								<span style="margin-right: 20px">:</span>
-								<button type="button" class="btn" style="background-color: #212121; color: #F9F9F9; min-width: 100px;">GitHub</button>
-								<button type="button" class="btn" style="background-color: #212121; color: #F9F9F9; min-width: 100px;">Blog</button>
-								
-							</p>
+							<div class="label">LINK</div>
+							<div class="colon" >:</div>
+							<div class="value" >
+								<button type="button" class="btn">GitHub</button>
+								<button type="button" class="btn">Blog</button>
+							</div>
 						</div>
 					</div>
+					<!-- contact :: e -->
+					
+					<!-- qna :: s -->
+					<div class="qna-wrapper col-lg-6">
+						<div>
+							<label for="name" class="form-label">성명 (또는 업체명)</label>
+							<input type="text" class="form-control" id="name" autocomplete="off">
+						</div>
+						<div>
+							<label for="sender-info" class="form-label">연락처 (핸드폰 또는 이메일)</label>
+							<input type="text" class="form-control" id="sender-info" autocomplete="off">
+						</div>
+						<div>
+							<label for="value" class="form-label">문의 내용</label>
+							<textarea class="form-control" id="value" rows="10"></textarea>
+						</div>
+						<div class="d-flex aic jcc">
+							<button type="button" class="btn-send btn">보내기</button>
+						</div>
+					</div>
+					<!-- qna :: e -->
 				</div>
 			</div>
 		</section>
 		<!-- section contact :: e -->
+		
+		<footer class="container" style="height: 200px; border-top: 1px solid #5B5B5C; padding-top: 30px; padding-left: 10px;">
+			<p>© 2025 Geekily (Geekily Portfolio). All rights reserved.<p>
+			<p>This website's design was inspired by Luther, but all code was written from scratch.<p>
+		</footer>
 	</div>
 </body>
 </html>
