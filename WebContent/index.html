@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Geekily Portfolio</title>
+	<title>Geekive Portfolio</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-icon/font/bootstrap-icons.min.css"/>
@@ -39,13 +39,47 @@
 			</div>
 			<div class="menu-button-wrapper d-flex">
 				<div class="d-flex aic jcs">
-					Geekily Portfolio
+					Geekive Portfolio
 				</div>
 				<div class="d-flex aic jce">
-					<i class="bi bi-list"></i>
+					<i id="btn-menu" class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#menu"></i>
+				</div>
+			</div>
+			
+			<div class="offcanvas offcanvas-top" tabindex="-1" id="menu" style="height: 450px; background-color: #171717; color: #F9F9F9;">
+				<div class="offcanvas-header" style="height: 50px;">
+				  <p style="font-size: 1.2rem; padding-top: 30px; padding-left: 15px;">Geekive Portfolio</p>
+				  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div style="height: 1000px; padding-left: 30px; padding-top: 20px;">
+					<a class="menu d-flex aic jcs" href="#home">
+						홈
+					</a>
+					<a class="menu d-flex aic jcs" href="#about">
+						소개
+					</a>
+					<a class="menu d-flex aic jcs" href="#career">
+						커리어
+					</a>
+					<a class="menu d-flex aic jcs" href="#project">
+						프로젝트
+					</a>
+					<a class="menu d-flex aic jcs" href="#skill">
+						기술
+					</a>
+					<a class="menu d-flex aic jcs" href="#contact">
+						컨텍트
+					</a>
 				</div>
 			</div>
 		</div>
+		<script>
+			$(function(){
+				$('.offcanvas .menu').on('click', function(){
+					$('.offcanvas .btn-close').trigger('click');
+				})
+			})
+		</script>
 		<!-- menu :: e -->
 		
 		<!-- section home :: s -->
@@ -240,10 +274,10 @@
 					<div class="line"></div>프로젝트
 				</div>
 				<div class="content">
-					<div class="project-wrapper d-flex jcs" onclick="window.open('https://geekily-archive.com', '_blank')">
+					<div class="project-wrapper d-flex jcs" onclick="window.open('https://archive.geekive.com', '_blank')">
 						<img src="image/section04-project-archive.jpg" class="project-image">
 						<div class="project-info">
-							<p>Geekily Archive</p>
+							<p>Geekive Archive</p>
 							<p>2025. 04</p>
 							<p>&lt;개발자라면 티스토리말고 본인이 직접 만든 블로그를 운영하자&gt;를 취지로 개발한 가입형 블로그</p>
 							<p class="tags">
@@ -368,7 +402,7 @@
 					<!-- database :: s -->
 					<div class="skill-wrapper">
 					 	<p class="skill-category"># 데이터 베이스</p>
-					 	<div class="skill-badge-wrapper d-flex aic jcs">
+					 	<div class="skill-badge-wrapper row">
 					 		<!-- oracle database -->
 							<div class="badge col-2 d-flex aic jcc">
 								<svg class="oracle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
@@ -487,7 +521,7 @@
 							<div class="line"></div>
 							<div class="label">EMAIL</div>
 							<div class="colon" >:</div>
-							<div class="value" >geekily.com@gmail.com</div>
+							<div class="value" >geekive.com@gmail.com</div>
 						</div>
 						<div class="phone d-flex aic jcs">
 							<div class="line"></div>
@@ -532,7 +566,7 @@
 		<!-- section contact :: e -->
 		
 		<footer class="container" style="height: 200px; border-top: 1px solid #5B5B5C; padding-top: 30px; padding-left: 10px;">
-			<p>© 2025 Geekily (Geekily Portfolio). All rights reserved.<p>
+			<p>© 2025 Geekive (Geekive Portfolio). All rights reserved.<p>
 			<p>This website's design was inspired by Luther, but all code was written from scratch.<p>
 		</footer>
 	</div>

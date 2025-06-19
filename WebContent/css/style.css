@@ -123,6 +123,12 @@ html, body {
 	scroll-behavior: smooth;
 }
 
+@media ( max-width : 430px) {
+	html, body {
+		font-size: 0.9rem;
+	}
+}
+
 a {
   color: inherit;             
   text-decoration: none;    
@@ -197,7 +203,18 @@ a:active {
 
 .menu-container .menu-button-wrapper i {
 	font-size: 2rem;
+	cursor: pointer;
 }
+
+.menu-container #menu .menu{
+	height: 60px; font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.menu-container #menu .menu:hover{
+	color: #A9701B;
+}
+
 
 @media ( max-width : 850px) {
 	.menu-container .menu-wrapper {
@@ -505,14 +522,6 @@ section {
 	font-size: 1.2rem;
 }
 
-.career-project-image {
-	width: 140px;
-	height: 140px;
-	border-radius: 5%;
-	object-fit: contain;
-	background-color: #fff;
-}
-
 .career-container .content .timeline-wrapper .timeline {
 	position: relative;
 	padding-left: 25px;
@@ -549,6 +558,14 @@ section {
 
 .career-container .content .timeline-wrapper .timeline .project-wrapper:first-of-type {
 	margin-top: 0px;
+}
+
+.career-container .content .timeline-wrapper .timeline .project-wrapper .career-project-image {
+	width: 140px;
+	height: 140px;
+	border-radius: 5%;
+	object-fit: contain;
+	background-color: #fff;
 }
 
 .career-container .content .timeline-wrapper .timeline .project-wrapper div {
@@ -620,6 +637,17 @@ section {
 }
 
 @media ( max-width : 767px) {
+	.section-career .career-container .content .company-wrapper .company-image{
+		width: 150px;
+		height: 150px;
+	}
+	.career-container .content .timeline-wrapper .timeline .project-wrapper .career-project-image {
+		width: 110px;
+		height: 110px;
+	}
+	.career-container .content .timeline-wrapper .timeline .project-wrapper div p:nth-child(3) {
+		display: none;
+	}
 	.career-container .content .timeline-wrapper .timeline:nth-child(1) {
 		margin-left: 5px;
 	}
@@ -627,6 +655,7 @@ section {
 		margin-left: 5px;
 	}
 }
+
 
 .section-project{
 	min-height: 800px;
@@ -729,6 +758,10 @@ section {
 }
 
 @media ( max-width : 767px) {
+	.section-project .project-container .content .project-wrapper .project-image{
+		width: 150px;
+		height: 150px;
+	}
 	.section-project .project-container .content .project-wrapper .project-info
 		{
 		display: flex;
@@ -747,6 +780,12 @@ section {
 	}
 	.section-project .project-container .content .project-wrapper .project-info p:nth-child(3){
 		display: none;
+	}
+}
+
+@media ( max-width : 430px) {
+	.section-project .project-container .content .project-wrapper .project-info p:first-of-type{
+		font-size: 1.4rem;
 	}
 }
 
