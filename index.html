@@ -11,6 +11,25 @@
 	
 	<script type="text/javascript" charset="utf-8" src="js/jquery/jquery-3.7.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bootstrap/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			function revealContainers() {
+				let triggerPoint = $(window).height() * 0.85;
+
+				$('.container').each(function() {
+				let $container = $(this);
+				let rectTop = $container[0].getBoundingClientRect().top;
+
+				if (rectTop < triggerPoint) {
+					$container.removeClass('hide');
+				}
+				});
+			}
+
+			$(window).on('scroll load', revealContainers);
+		})
+
+	</script>
 </head>
 <body>
 	<div class="body-wrapper container-fluid">
@@ -108,7 +127,7 @@
 		
 		<!-- section about :: s -->
 		<section class="section-about" id="about">
-			<div class="about-container container d-flex jcs">
+			<div class="about-container container d-flex jcs hide">
 				<div class="about-image-wrapper">
  					<img src="https://themewagon.github.io/luther/images/about-photo.jpg"/>
  				</div>
@@ -149,7 +168,7 @@
 		
 		<!-- section career :: s -->
 		<section class="section-career" id="career">
-			<div class="career-container container">
+			<div class="career-container container hide">
 				<div class="title d-flex aic">
 					<div class="line"></div>커리어
 				</div>
@@ -170,7 +189,7 @@
 								<div>
 									<p>통일플러스센터 통합홈페이지 유지관리</p>
 									<p>2024. 01 ~ 2024. 12</p>
-									<p>#전자정부프레임워크</p>
+									<p>#웹접근성 #웹취약점 #전자정부프레임워크</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -178,6 +197,7 @@
 								<div>
 									<p>한국해양수산연수원 국가자격시험 통합관리시스템 고도화</p>
 									<p>2023. 08 ~ 2024. 01</p>
+									<p>#한글웹기안기_커스터마이징 #스프링 #오라클</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -185,6 +205,7 @@
 								<div>
 									<p>KCC 홈씨씨 운영유지보수 / 개인정보관리 보완</p>
 									<p>2022. 09 ~ 2023. 04</p>
+									<p>#결제시스템 #스프링</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -192,6 +213,7 @@
 								<div>
 									<p>한국해양수산연수원 정보시스템 유지보수</p>
 									<p>2021. 12 ~ 진행중</p>
+									<p>#문제은행 #CBT시스템 #스프링 #오라클</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -199,7 +221,7 @@
 								<div>
 									<p>SafecCon 망 연계 서비스 유지보수</p>
 									<p>2021. 10 ~ 2022. 04</p>
-									<p>#전자정부프레임워크</p>
+									<p>#망연계 #셀스크립트</p>
 								</div>
 							</div>
 						</div>
@@ -210,6 +232,7 @@
 								<div>
 									<p>진료내역확인스세텀 통합유지보수 용역</p>
 									<p>2021. 07 ~ 진행중</p>
+									<p>#웹로직 #오라클DB_마이그레이션</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -217,6 +240,7 @@
 								<div>
 									<p>LG 에너지솔루션 대표 홈페이지 구축 사업</p>
 									<p>2021. 06 ~ 2021. 09</p>
+									<p>#DevOn</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -224,6 +248,7 @@
 								<div>
 									<p>AL360 메타포트 서비스 홈페이지 구축 사업</p>
 									<p>2021. 05 ~ 2021. 06</p>
+									<p>#메타포트</p>
 								</div>
 							</div>
 							<div class="project-wrapper d-flex jcs">
@@ -269,7 +294,7 @@
 		
 		<!-- section project :: s -->
 		<section class="section-project" id="project">
-			<div class="project-container container">
+			<div class="project-container container hide">
 				<div class="title d-flex aic">
 					<div class="line"></div>프로젝트
 				</div>
@@ -307,7 +332,7 @@
 		
 		<!-- section skill :: s -->
 		<section class="section-skill" id="skill">
-			<div class="skill-container container">
+			<div class="skill-container container hide">
 				<div class="title d-flex aic">
 					<div class="line"></div>기술
 				</div>
@@ -510,7 +535,7 @@
 		
 		<!-- section contact :: s -->
 		<section class="section-contact" id="contact">
-			<div class="contact-container container">
+			<div class="contact-container container hide">
 				<div class="title d-flex aic jcc">
 					컨텍트
 				</div>
@@ -534,8 +559,8 @@
 							<div class="label">LINK</div>
 							<div class="colon" >:</div>
 							<div class="value" >
-								<button type="button" class="btn">GitHub</button>
-								<button type="button" class="btn">Blog</button>
+								<button type="button" class="btn" onclick="window.open('https://github.com/geekive', '_blank')">GitHub</button>
+								<button type="button" class="btn" onclick="window.open('https://archive.geekive.com/geekive', '_blank')">Blog</button>
 							</div>
 						</div>
 					</div>
@@ -545,15 +570,15 @@
 					<div class="qna-wrapper col-lg-6">
 						<div>
 							<label for="name" class="form-label">성명 (또는 업체명)</label>
-							<input type="text" class="form-control" id="name" autocomplete="off">
+							<input type="text" class="form-control" id="name" autocomplete="off" maxlength="20">
 						</div>
 						<div>
 							<label for="sender-info" class="form-label">연락처 (핸드폰 또는 이메일)</label>
-							<input type="text" class="form-control" id="sender-info" autocomplete="off">
+							<input type="text" class="form-control" id="sender-info" autocomplete="off" maxlength="30">
 						</div>
 						<div>
 							<label for="value" class="form-label">문의 내용</label>
-							<textarea class="form-control" id="text" rows="10"></textarea>
+							<textarea class="form-control" id="text" rows="10" maxlength="1000"></textarea>
 						</div>
 						<div class="d-flex aic jcc">
 							<button type="button" id="btn-send" class="btn-send btn">보내기</button>
@@ -565,6 +590,9 @@
 							    let name 		= $('#name').val();
 							    let senderInfo 	= $('#sender-info').val();
 							    let text 		= $('#text').val();
+								
+								let $this = $(this);
+								$this.attr('disabled', true);
 
 							    $.ajax({
 							        url: 'https://api.geekive.com/email'
@@ -577,11 +605,13 @@
 							        })
 							        , success: function (response) {
 							            alert('메일이 성공적으로 전송되었습니다.');
-							            console.log(response);
+										setTimeout(()=>{
+											$this.attr('disabled', false);
+										}, 5000)
 							        }
 							    	, error: function (xhr, status, error) {
-							            alert('메일 전송 실패: ' + xhr.responseText);
-							            console.error(error);
+										alert('메일 송신을 할 수 없습니다.');
+										$this.attr('disabled', false);
 							        }
 							    });
 							});
