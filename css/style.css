@@ -715,7 +715,6 @@ section {
 }
 
 .modal-content {
-	background: white;
 	height: auto;
 	max-width: 740px;
 	height: auto;
@@ -741,14 +740,6 @@ section {
 	border: none;
 	cursor: pointer;
 }
-
-.open-modal-btn {
-	margin: 50px;
-	padding: 12px 24px;
-	font-size: 16px;
-	cursor: pointer;
-}
-
 /* career > modal :: e */
 
 @media (max-width : 1399px) {
@@ -796,6 +787,23 @@ section {
 
 	.career-container .content .timeline-wrapper .timeline:nth-child(2) {
 		margin-left: 5px;
+	}
+}
+
+@media (max-width : 756px) {
+	.modal-content{
+		margin-top: 80px;
+		padding: 15px;
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		font-size: 24px;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 }
 

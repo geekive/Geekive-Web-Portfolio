@@ -190,7 +190,7 @@
 									<p>#웹접근성 #웹취약점 #전자정부프레임워크</p>
 								</div>
 							</div>
-							<div class="project-wrapper d-flex jcs">
+							<div class="project-wrapper d-flex jcs" onclick="fnOpenModal('section03-project-detail-kimft-transformation-kr.png')">
 								<img src="image/section03-project-kimft.jpg" class="career-project-image">
 								<div>
 									<p>한국해양수산연수원 국가자격시험 통합관리시스템 고도화</p>
@@ -198,7 +198,7 @@
 									<p>#한글웹기안기_커스터마이징 #스프링 #오라클</p>
 								</div>
 							</div>
-							<div class="project-wrapper d-flex jcs">
+							<div class="project-wrapper d-flex jcs" onclick="fnOpenModal('section03-project-detail-homecc-kr.png')">
 								<img src="image/section03-project-homecc.jpg" class="career-project-image">
 								<div>
 									<p>KCC 홈씨씨 운영유지보수 / 개인정보관리 보완</p>
@@ -630,13 +630,13 @@
 	<!-- career modal :: s -->
 	<div class="modal-overlay" id="career-modal">
 		<div class="modal-content" id="modalContent">
-			<button class="close-btn" onclick="closeModal()">&times;</button>
+			<button class="close-btn" onclick="fnCloseModal()">&times;</button>
 			<img id="modal-image" style="max-width: 100%; height: auto;">
 		</div>
 	</div>
 	<script>
 		const $careerModal = $('#career-modal');
-		const modal = document.getElementById("career-modal");
+
 		function fnOpenModal(value){
 			$('#modal-image').attr('src', 'image/' + value);
 
@@ -648,25 +648,23 @@
 			$careerModal.removeClass("fade-out");
 			$careerModal.addClass("fade-in");
 		}
-	</script>
-	<script>
-		function closeModal() {
-			modal.classList.remove("fade-in");
-			modal.classList.add("fade-out");
 
-			modal.addEventListener("animationend", () => {
-				modal.style.display = "none";
-			    document.body.style.overflow = '';
-   				document.body.style.paddingRight = ''; // 보정 제거
+		function fnCloseModal() {
+			$careerModal.removeClass('fade-in');
+			$careerModal.addClass('fade-out');
+
+			$careerModal.on('animationend', function() {
+				$(this).css('display', 'none');
+				$('body').css({overflow: '', paddingRight: ''});
 				$('.menu-container').css('padding-right', '0px');
-			}, { once: true });
+
+				$(this).off('animationend');
+			});
 		}
 
-		modal.addEventListener("click", function(e) {
-		if (e.target === modal) {
-			closeModal();
-		}
-		});
+		$careerModal.on('click', ()=>{
+			fnCloseModal();
+		})
 	</script>
 	<!-- career modal :: e -->
 </body>
