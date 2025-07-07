@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-icon/font/bootstrap-icons.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	
+
 	<script type="text/javascript" charset="utf-8" src="js/jquery/jquery-3.7.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bootstrap/bootstrap.min.js"></script>
 	<script>
@@ -25,10 +25,8 @@
 				}
 				});
 			}
-
 			$(window).on('scroll load', revealContainers);
 		})
-
 	</script>
 </head>
 <body>
@@ -184,7 +182,7 @@
 					</div>
 					<div class="timeline-wrapper d-flex jcs">
 						<div class="timeline">
-							<div class="project-wrapper d-flex jcs">
+							<div class="project-wrapper d-flex jcs" onclick="fnOpenModal('section03-project-detail-unipluscenter-kr.png')">
 								<img src="image/section03-project-unipluscenter.jpg" class="career-project-image">
 								<div>
 									<p>통일플러스센터 통합홈페이지 유지관리</p>
@@ -628,5 +626,48 @@
 			<p>This website's design was inspired by Luther, but all code was written from scratch.<p>
 		</footer>
 	</div>
+
+	<!-- career modal :: s -->
+	<div class="modal-overlay" id="career-modal">
+		<div class="modal-content" id="modalContent">
+			<button class="close-btn" onclick="closeModal()">&times;</button>
+			<img id="modal-image" style="max-width: 100%; height: auto;">
+		</div>
+	</div>
+	<script>
+		const $careerModal = $('#career-modal');
+		const modal = document.getElementById("career-modal");
+		function fnOpenModal(value){
+			$('#modal-image').attr('src', 'image/' + value);
+
+			const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+			$('body').css('overflow', 'hidden');
+			$('body, .menu-container').css('padding-right', `${scrollBarWidth}px`);
+			$careerModal.css('display', 'block');
+
+			$careerModal.removeClass("fade-out");
+			$careerModal.addClass("fade-in");
+		}
+	</script>
+	<script>
+		function closeModal() {
+			modal.classList.remove("fade-in");
+			modal.classList.add("fade-out");
+
+			modal.addEventListener("animationend", () => {
+				modal.style.display = "none";
+			    document.body.style.overflow = '';
+   				document.body.style.paddingRight = ''; // 보정 제거
+				$('.menu-container').css('padding-right', '0px');
+			}, { once: true });
+		}
+
+		modal.addEventListener("click", function(e) {
+		if (e.target === modal) {
+			closeModal();
+		}
+		});
+	</script>
+	<!-- career modal :: e -->
 </body>
 </html>
