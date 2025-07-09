@@ -20,23 +20,6 @@
 
 	<script type="text/javascript" charset="utf-8" src="js/jquery/jquery-3.7.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bootstrap/bootstrap.min.js"></script>
-	<script>
-		$(function(){
-			function revealContainers() {
-				let triggerPoint = $(window).height() * 0.85;
-
-				$('.container').each(function() {
-				let $container = $(this);
-				let rectTop = $container[0].getBoundingClientRect().top;
-
-				if (rectTop < triggerPoint) {
-					$container.removeClass('hide');
-				}
-				});
-			}
-			$(window).on('scroll load', revealContainers);
-		})
-	</script>
 </head>
 <body>
 	<div class="body-wrapper container-fluid">
@@ -72,12 +55,12 @@
 				</div>
 			</div>
 			
-			<div class="offcanvas offcanvas-top" tabindex="-1" id="menu" style="height: 450px; background-color: #171717; color: #F9F9F9;">
-				<div class="offcanvas-header" style="height: 50px;">
-				  <p style="font-size: 1.2rem; padding-top: 30px; padding-left: 15px;">Geekive Portfolio</p>
+			<div class="menu-offcanvas-wrapper offcanvas offcanvas-top" id="menu" tabindex="-1">
+				<div class="menu-offcanvas-header offcanvas-header">
+				  <p>Geekive Portfolio</p>
 				  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
-				<div style="height: 1000px; padding-left: 30px; padding-top: 20px;">
+				<div class="menu-offcanvas-body">
 					<a class="menu d-flex aic jcs" href="#home">
 						홈
 					</a>
@@ -599,9 +582,24 @@
 							    let senderInfo 	= $('#sender-info').val();
 							    let text 		= $('#text').val();
 								
+								if(isEmpty(name)){
+									alert('성명(또는 업체명)을 입력하세요.');
+									return
+								}
+								if(isEmpty(senderInfo)){
+									alert('연락처(핸드폰 또는 이메일)를 입력하세요.');
+									return
+								}
+								if(isEmpty(text)){
+									alert('문의 내용을 입력하세요.');
+									return
+								}
+
 								let $this = $(this);
 								$this.attr('disabled', true);
-
+								
+								fnOpenLoading();
+								
 							    $.ajax({
 							        url: 'https://api.geekive.com/email'
 							        , type: 'POST'
@@ -612,17 +610,27 @@
 							        	, text			: text
 							        })
 							        , success: function (response) {
+										fnCloaseLoading();
 							            alert('메일이 성공적으로 전송되었습니다.');
 										setTimeout(()=>{
 											$this.attr('disabled', false);
 										}, 5000)
 							        }
 							    	, error: function (xhr, status, error) {
+										fnCloaseLoading();
 										alert('메일 송신을 할 수 없습니다.');
 										$this.attr('disabled', false);
 							        }
 							    });
 							});
+
+							function isEmpty(value){
+								if(value == null || value.length == 0){
+									return true
+								}else{
+									return false
+								}
+							}
 						});
 					</script>
 					<!-- qna :: e -->
@@ -631,17 +639,52 @@
 		</section>
 		<!-- section contact :: e -->
 		
-		<footer class="container" style="height: 200px; border-top: 1px solid #5B5B5C; padding-top: 30px; padding-left: 10px;">
+		<footer class="container">
 			<p>© 2025 Geekive (Geekive Portfolio). All rights reserved.<p>
 			<p>This website's design was inspired by Luther, but all code was written from scratch.<p>
 		</footer>
 	</div>
 
+	<!-- common function :: s-->
+	<script>
+		function fnHiddenOverflow(boolean){
+			if(boolean){
+				const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+				$('body').css('overflow', 'hidden');
+				$('body, .menu-container').css('padding-right', `${scrollBarWidth}px`);
+			}else{
+				$('body').css({overflow: '', paddingRight: ''});
+				$('.menu-container').css('padding-right', '0px');
+			}	
+		}
+	</script>
+	<!-- common function :: s-->
+
+	<!-- section animation :: s -->
+	<script>
+		$(function(){
+			function revealContainers() {
+				let triggerPoint = $(window).height() * 0.85;
+
+				$('.container').each(function() {
+				let $container = $(this);
+				let rectTop = $container[0].getBoundingClientRect().top;
+
+				if (rectTop < triggerPoint) {
+					$container.removeClass('hide');
+				}
+				});
+			}
+			$(window).on('scroll load', revealContainers);
+		})
+	</script>
+	<!-- section animation :: e -->
+	 
 	<!-- career modal :: s -->
 	<div class="modal-overlay" id="career-modal">
 		<div class="modal-content" id="modalContent">
 			<button class="close-btn" onclick="fnCloseModal()">&times;</button>
-			<img id="modal-image" style="max-width: 100%; height: auto;">
+			<img id="modal-image">
 		</div>
 	</div>
 	<script>
@@ -650,11 +693,9 @@
 		function fnOpenModal(value){
 			$('#modal-image').attr('src', 'image/' + value);
 
-			const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-			$('body').css('overflow', 'hidden');
-			$('body, .menu-container').css('padding-right', `${scrollBarWidth}px`);
-			$careerModal.css('display', 'block');
+			fnHiddenOverflow(true);
 
+			$careerModal.css('display', 'block');
 			$careerModal.removeClass("fade-out");
 			$careerModal.addClass("fade-in");
 		}
@@ -664,10 +705,8 @@
 			$careerModal.addClass('fade-out');
 
 			$careerModal.on('animationend', function() {
+				fnHiddenOverflow(false);
 				$(this).css('display', 'none');
-				$('body').css({overflow: '', paddingRight: ''});
-				$('.menu-container').css('padding-right', '0px');
-
 				$(this).off('animationend');
 			});
 		}
@@ -677,5 +716,22 @@
 		})
 	</script>
 	<!-- career modal :: e -->
+
+	<!-- loading :: s -->
+	<div class="loading-overlay d-none">
+		<div class="spinner-border text-light" role="status"></div>
+	</div>
+	<script>
+		const $loadingOverlay = $('.loading-overlay');
+		function fnOpenLoading(){
+			fnHiddenOverflow(true);
+			$loadingOverlay.removeClass('d-none');
+		}
+		function fnCloaseLoading(){
+			fnHiddenOverflow(false);
+			$loadingOverlay.addClass('d-none');
+		}
+	</script>
+	<!-- loading :: e -->
 </body>
 </html>
