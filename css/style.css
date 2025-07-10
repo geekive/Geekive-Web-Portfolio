@@ -223,9 +223,6 @@ a:active {
 	color: #A9701B;
 }
 
-
-
-
 @media (max-width : 850px) {
 	.menu-container .menu-wrapper {
 		display: none !important;
@@ -236,6 +233,93 @@ a:active {
 	}
 }
 
+/* language button */
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-6px); }
+	100% { transform: translateY(0); }
+}
+
+.language-button:hover svg path,
+.language-button.active svg path {
+	fill: #A9701B;
+}
+
+.language-button {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	background-color: #000;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1000;
+	animation: float 2.5s ease-in-out infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.language-button.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.language-button img {
+	width: 30px;
+	height: 30px;
+}
+
+.language-popup {
+	position: fixed;
+	bottom: 100px;
+	right: 30px;
+	background: #171717;
+	border: 1px solid #212121;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+	display: none;
+	flex-direction: column;
+	min-width: 150px;
+	z-index: 1001;
+}
+
+.language-option {
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.language-option:hover {
+	color: #A9701B;
+}
+
+@media (max-width : 992px) {
+	.language-button {
+		bottom: 20px;
+		right: 20px;
+	}
+	.language-popup {
+		bottom: 90px;
+		right: 20px;
+	}
+}
+
+@media (max-width : 850px) {
+	.language-button {
+		opacity: 0;
+	}
+	.language-popup {
+		opacity: 0;
+	}
+}
+
+/* section */
 section {
 	max-width: 1920px;
 	padding: 0px;
