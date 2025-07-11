@@ -240,11 +240,6 @@ a:active {
 	100% { transform: translateY(0); }
 }
 
-.language-button:hover svg path,
-.language-button.active svg path {
-	fill: #A9701B;
-}
-
 .language-button {
 	position: fixed;
 	bottom: 30px;
@@ -259,10 +254,14 @@ a:active {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* .language-button:hover svg path, */
+.language-button.active svg path {
+	fill: #A9701B;
 }
 
 .language-button.hidden {
@@ -285,17 +284,18 @@ a:active {
 	box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 	display: none;
 	flex-direction: column;
-	min-width: 150px;
+	min-width: 110px;
 	z-index: 1001;
+	align-items: center;
 }
 
-.language-option {
+.language-popup .language-option {
 	padding: 10px 15px;
 	cursor: pointer;
 	transition: background 0.2s ease;
 }
 
-.language-option:hover {
+.language-popup  .language-option:hover {
 	color: #A9701B;
 }
 
@@ -307,15 +307,6 @@ a:active {
 	.language-popup {
 		bottom: 90px;
 		right: 20px;
-	}
-}
-
-@media (max-width : 850px) {
-	.language-button {
-		opacity: 0;
-	}
-	.language-popup {
-		opacity: 0;
 	}
 }
 
@@ -377,6 +368,10 @@ section {
 	position: absolute;
 }
 
+.home-container .introduction-animation-wrapper .text-animation.en {
+	font-size: 4.5rem;
+}
+
 .home-container .introduction-animation-wrapper .text-animation:nth-child(1) {
 	animation-delay: 0s;
 }
@@ -419,10 +414,31 @@ section {
 	font-size: 5rem;
 }
 
+.home-container .introduction-wrapper.en {
+	font-size: 4.5rem;
+}
+
 .home-container .introduction-wrapper font {
 	font-weight: bold;
 	font-size: 6.5rem;
 }
+
+.home-container .introduction-wrapper font.en {
+	font-size: 5rem;
+}
+
+@media (max-width : 1399px) {
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 4rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 4rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 4.5rem;
+	}
+}
+
 
 @media (max-width : 1199px) {
 	.home-container .introduction-animation-wrapper .text-animation {
@@ -435,6 +451,16 @@ section {
 
 	.home-container .introduction-wrapper font {
 		font-size: 5.5rem;
+	}
+
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 3.5rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 3.5rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 4rem;
 	}
 }
 
@@ -453,6 +479,16 @@ section {
 
 	.home-container .introduction-wrapper font {
 		font-size: 4.5rem;
+	}
+
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 2.6rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 2.6rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 3.1rem;
 	}
 }
 
@@ -481,6 +517,16 @@ section {
 	.home-container .introduction-wrapper font {
 		font-size: 3.5rem;
 	}
+
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 1.6rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 1.9rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 2.4rem;
+	}
 }
 
 @media (max-width : 450px) {
@@ -495,6 +541,16 @@ section {
 	.home-container .introduction-wrapper font {
 		font-size: 3.3rem;
 	}
+
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 1.44rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 1.9rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 2rem;
+	}
 }
 
 @media (max-width : 414px) {
@@ -508,6 +564,16 @@ section {
 
 	.home-container .introduction-wrapper font {
 		font-size: 2.8rem;
+	}
+
+	.home-container .introduction-animation-wrapper .text-animation.en {
+		font-size: 1.35rem;
+	}
+	.home-container .introduction-wrapper.en {
+		font-size: 1.6rem;
+	}
+	.home-container .introduction-wrapper font.en {
+		font-size: 2rem;
 	}
 }
 
@@ -664,6 +730,33 @@ section {
 	height: 1.5px;
 	background-color: #5B5B5C;
 	max-width: 100%;
+}
+
+.si-sm {
+  display: inline;
+  white-space: nowrap;
+}
+
+.slash {
+  display: inline;
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 499px) {
+  .si-sm {
+    white-space: normal;
+  }
+
+  .slash {
+    display: none;
+  }
+
+  .mobile-break {
+    display: inline;
+  }
 }
 
 .section-career .career-container .content .company-wrapper .company-image {
@@ -852,6 +945,10 @@ section {
 	background: none;
 	border: none;
 	cursor: pointer;
+	color: #000000; 
+	appearance: none;      
+	-webkit-appearance: none; 
+	-moz-appearance: none;
 }
 /* career > modal :: e */
 
