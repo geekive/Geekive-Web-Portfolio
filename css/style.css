@@ -1049,6 +1049,10 @@ section {
 	width: fit-content;
 }
 
+.section-project .project-container  .content .project-wrapper:not(:first-child) {
+    margin-top: 80px;
+}
+
 
 .section-project .project-container .content .project-wrapper .project-image {
 	width: 190px;
@@ -1240,6 +1244,11 @@ section {
 	margin-bottom: 7px;
 }
 
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.python {
+	width: 22px;
+	fill: #3776AB;
+}
+
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.html {
 	width: 22px;
 	fill: #E34F26;
@@ -1273,6 +1282,11 @@ section {
 	height: 21px;
 }
 
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.flask {
+	width: 22px;
+	fill: #3BABC3
+}
+
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.jquery {
 	width: 23px;
 	fill: #0769AD
@@ -1289,6 +1303,11 @@ section {
 
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.cubrid {
 	width: 22px;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.sqlite {
+	width: 22px;
+	fill: #003B57
 }
 
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.git {
