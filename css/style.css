@@ -1321,7 +1321,7 @@ section {
 
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.docker {
 	width: 22px;
-	fill: #2496ED
+	fill: #2496ED;
 }
 
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.aws {
@@ -1330,6 +1330,31 @@ section {
 
 .section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge img.oracle-cloud {
 	width: 22px;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.nginx {
+	width: 22px;
+	fill: #009639;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.tomcat {
+	width: 22px;
+	fill: #F8DC75;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.jbosseap {
+	width: 22px;
+	fill: #EE0000;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.gunicorn {
+	width: 22px;
+	fill: #499848;
+}
+
+.section-skill .skill-container .content .skill-wrapper .skill-badge-wrapper .badge svg.maven {
+	width: 22px;
+	fill: #C71A36;
 }
 
 @media (max-width : 1437px) {
